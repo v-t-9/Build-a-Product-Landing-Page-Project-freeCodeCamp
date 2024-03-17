@@ -1,0 +1,167 @@
+:root{
+    --white:#F6F6F6;
+    --violet-1: #DDCDDD;
+    --dark-violet:#7B007B;
+    --violet-2:#CA38CA;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 4em;
+    position: fixed;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+li{
+    list-style-type:none;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+.nav-link{
+    text-decoration: none;
+    padding: 20px;
+}
+.nav-link:hover{
+    background-color: var(--violet-1);
+    
+}
+
+.nav-link, #title{
+    font-family: "Sanchez", serif;
+    color:var(--dark-violet);
+    font-size: 1.1em;
+}
+.img-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+#header-img{
+    width: 2em;
+}
+main{
+    padding: 80px 0;
+    font-family: "Sanchez", serif;
+}
+h2{
+    text-align: center;
+    padding: 2em 2.5em;
+    font-family: "Buenard", serif;
+    color: var(--violet-2);
+}
+.photo-cups{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(4,  20%);
+    justify-content: center;
+    
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.video-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#video{
+    width: 500px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea, #submit{
+    margin: 5px 0 10px 0;
+    width: 400px;
+    outline: none;
+    border: 1px solid var(--dark-violet)
+    
+}
+input[type="file"], #submit, label{
+    font-family: "Sanchez", serif;
+    color:var(--dark-violet);
+}
+input[type="file"]{
+    border: none;
+}
+input{
+    height: 25px;
+}
+#submit, label{
+    font-size: 1.1em;
+}
+#submit{
+    height: 35px;
+    background-color: var(--violet-2);
+    color: var(--white);
+    border: 0;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4em;
+    width: 100%;
+    
+}
+.socail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+.social a img{
+    width: 1em;
+    
+}
+a{
+    font-family: "Sanchez", serif;
+    color:var(--dark-violet);
+}
+
+@media screen and (max-width:480px){
+   header{
+    flex-direction: column;
+    height: max-content;
+   }
+    .nav-link{
+        padding: 0 2px;
+    }
+    main{
+        padding: 100px 0;
+    }
+    li a, #title, #submit, label{
+        font-size: 1em;
+    }
+    h2{
+        font-size: 1.1em;
+    }
+    #video{
+        width: 300px;
+        height: 200px;
+    }
+}
